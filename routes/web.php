@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\home::class ,'show']);
+Route::get('/profile', [App\Http\Controllers\profile::class ,'show']);

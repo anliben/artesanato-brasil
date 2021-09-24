@@ -14,6 +14,7 @@ class profile extends Controller
         $pecas = DB::select('select * from pecas where author = :id', ['id'=> $id]);
         $user = DB::table('profile')->where('id', $id)->first();
         $logged = Cache::get('logged');
+
         return view('components.single', ['telefone'=>$user->telefone, 'nome'=>$user->nome, 'logged'=>$logged])->with('pecas', $pecas);
     }
 }

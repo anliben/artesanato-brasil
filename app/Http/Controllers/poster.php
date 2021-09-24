@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+
+use function PHPSTORM_META\type;
+
 class poster extends Controller
 {
     public function area(){
@@ -23,10 +26,10 @@ class poster extends Controller
         $descricao = request()->input('descricao');
 
         $upload = request()->file('image');
-        $path = 'public/products';
-        $image_name = $upload->getClientOriginalName();
-        $p = request()->file('image')->storeAs($path, $image_name);
-        echo $p;
+        $file = fopen($upload, "rb");
+        $contents = fread($file, filesize($upload));
+        $base = base64_encode($contents);
+        fclose($file);
 
         if ( !$upload ) return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
 
@@ -36,8 +39,7 @@ class poster extends Controller
             "nome" => $nome,
             "categoria" => $categoria,
             "descricao" => $descricao,
-            "foto" => $image_name, "star" => "1"]);
-        dd($p);
-            #return redirect("profile/$id");
+            "foto" => $base, "star" => "1"]);
+            return redirect("profile/$id");
     }
 }

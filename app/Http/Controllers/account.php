@@ -25,10 +25,10 @@ class account extends Controller
         $descricao = request()->input('descricao');
 
         $upload = request()->file('image');
-        $path = 'public/profiles';
-        $profile_name = $upload->getClientOriginalName();
-        request()->file('image')->storeAs($path, $profile_name);
-
+        $file = fopen($upload, "rb");
+        $contents = fread($file, filesize($upload));
+        $base = base64_encode($contents);
+        fclose($file);
 
         $user = DB::table('profile')->where('email', $email)->first();
 
@@ -42,7 +42,7 @@ class account extends Controller
   "password" => $password,
   "telefone" => $telefone,
   "descricao" => $descricao,
-            "image" => $profile_name,
+            "image" => $base,
             "star" => 1]);
         return view('components.home');
     }

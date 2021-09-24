@@ -7,7 +7,7 @@
                 <div class="col s12 m6">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img width="350" height="350" class="activator" src="/../storage/products/{{$peca->foto}}">
+                            <img width="350" height="350" class="activator" src="data:image/jpeg;base64,{{$peca->foto}}">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">{{$peca->nome}}<i class="material-icons right">more_vert</i></span>

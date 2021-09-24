@@ -25,7 +25,8 @@ class poster extends Controller
         $upload = request()->file('image');
         $path = 'public/products';
         $image_name = $upload->getClientOriginalName();
-        request()->file('image')->storeAs($path, $image_name);
+        $p = request()->file('image')->storeAs($path, $image_name);
+        echo $p;
 
         if ( !$upload ) return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
 
@@ -36,6 +37,7 @@ class poster extends Controller
             "categoria" => $categoria,
             "descricao" => $descricao,
             "foto" => $image_name, "star" => "1"]);
-        return redirect("profile/$id");
+        dd($p);
+            #return redirect("profile/$id");
     }
 }

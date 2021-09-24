@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layout.layout')
 @section('header')
     <head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

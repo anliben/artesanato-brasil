@@ -14,4 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\home::class ,'show']);
-Route::get('/profile', [App\Http\Controllers\profile::class ,'show']);
+
+
+Route::get('/profile/{nome}', [App\Http\Controllers\profile::class ,'profile']);
+
+Route::get('/account/login', [App\Http\Controllers\account::class ,'login']);
+Route::get('/account/logout', [App\Http\Controllers\account::class ,'logout']);
+Route::post('/account/login', [App\Http\Controllers\account::class ,'auth']);
+
+Route::get('/account/create', [App\Http\Controllers\account::class ,'create']);
+Route::post('/account/create/new', [App\Http\Controllers\account::class ,'store']);
+
+Route::get('/product', [App\Http\Controllers\poster::class ,'product']);
+Route::get('/area', [App\Http\Controllers\poster::class , 'area']);
+Route::post('/product/new', [App\Http\Controllers\poster::class ,'create']);
+

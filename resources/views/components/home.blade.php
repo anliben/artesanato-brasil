@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('welcome')
 
 @section('content')
 
@@ -9,7 +9,7 @@
             <div class="col s12 m6">
                 <div class="card">
                     <div class="card-image">
-                        <img width="350" height="350" src="{{$profile->image}}">
+                        <img width="350" height="350" src="storage/profiles/{{$profile->image}}">
                         <span class="card-title darken-1">{{$profile->nome}}</span>
                         <a href="/profile/{{$profile->ID}}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                     </div>

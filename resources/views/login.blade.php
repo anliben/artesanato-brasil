@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layout.layout')
 @section('content')
 
     {!! $auth ?? '' !!}

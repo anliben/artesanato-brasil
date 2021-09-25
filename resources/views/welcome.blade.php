@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="manifest" href="icons/manifest.json">
     <meta name="msapplication-TileColor" content="#EE6E73">
-    <meta name="theme-color" content="##EE6E73">
+    <meta name="theme-color" content="#EE6E73">
 
 </head>
 <body>

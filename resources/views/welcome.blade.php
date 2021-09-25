@@ -17,7 +17,7 @@
         @isset($logged)
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a><i class="material-icons">search</i></a></li>
-                <li><a  href="{{url('/product/new')}}">Postar Peça</a></li>
+                <li><a  href="{{url('/product')}}">Postar Peça</a></li>
                 <li><a href="{{url('/area')}}">Minhas Peças</a></li>
                 <li><a href="#">Minha Conta</a></li>
                 <li><a class="red lighten-3" href="{{url('account/logout')}}"><i class="material-icons">person_pin</i></a></li>

@@ -15,6 +15,13 @@ class profile extends Controller
         $user = DB::table('profile')->where('id', $id)->first();
         $logged = Cache::get('logged');
 
-        return view('components.single', ['telefone'=>$user->telefone, 'nome'=>$user->nome, 'logged'=>$logged])->with('pecas', $pecas);
+        return view('components.single', [
+            'favicon' => $user->image,
+            'title'=> $user->nome ." - Artesanato Brasil",
+            'descricao'=>$user->descricao,
+            'telefone'=>$user->telefone,
+            'nome'=>$user->nome,
+            'logged'=>$logged
+            ])->with('pecas', $pecas);
     }
 }

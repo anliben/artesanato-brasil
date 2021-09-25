@@ -26,7 +26,7 @@ class poster extends Controller
         $descricao = request()->input('descricao');
 
         $upload = request()->file('image');
-        $file = fopen($upload, "rb");
+        $file = fopen($upload, "rb");   
         $contents = fread($file, filesize($upload));
         $base = base64_encode($contents);
         fclose($file);

@@ -37,7 +37,7 @@ class account extends Controller
         if ( !$upload ) return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
 
 
-        DB::table('profile')->insert(["nome" => $nome .'' .$sobrenome,
+        DB::table('profile')->insert(["nome" => $nome .' ' .$sobrenome,
   "email" => $email,
   "password" => $password,
   "telefone" => $telefone,

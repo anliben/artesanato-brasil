@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\home::class ,'show']);
+Route::get('/offline', [App\Http\Controllers\home::class ,'offline']);
 
 
 Route::get('/profile/{nome}', [App\Http\Controllers\profile::class ,'profile']);

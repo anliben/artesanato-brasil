@@ -10,7 +10,15 @@
     <link rel="manifest" href="icons/manifest.json">
     <meta name="msapplication-TileColor" content="#EE6E73">
     <meta name="theme-color" content="#EE6E73">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZYC6HRRKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-6ZYC6HRRKF');
+</script>
 </head>
 <body>
 <nav>

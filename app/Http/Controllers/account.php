@@ -44,7 +44,7 @@ class account extends Controller
   "descricao" => $descricao,
             "image" => $base,
             "star" => 1]);
-        return view('components.home');
+            return redirect('/account/login');
     }
 
     public function auth(){

@@ -1,41 +1,22 @@
 @extends('welcome')
 @section('meta_tags')
+
 <title>{{ $title }}</title>
 <meta name="generator" content="Visual Studio Code">
 <meta name="HandheldFriendly" content="true">
-<meta property="og:title" content="{{ $title ?? 'Artesanato Brasil' }}">
-<meta property="og:url" content="{{ $title ?? 'Artesanato Brasil' }}">
+<meta property="og:title" content="Artesanato Brasil">
+<meta property="og:url" content="http://artesanato-brasil.herokuapp.com">
 <meta property="og:artesanatobrasil"
-    content="{{$descricao}}">
+    content="Amigurinhos chegou o meio de você aumentar sua renda vendendo sua arte ou artesanato para pessoas de todo o Brasil">
 <meta property="og:type" content="website">
-<meta property="og:description" content="{{$descricao}}">
-<meta property="og:image"
-content="data:image/jpeg;base64,{{$favicon}}">
+<meta property="og:description" content="Amigurinhos chegou o meio de você aumentar sua renda vendendo sua arte ou artesanato para pessoas de todo o Brasil">
 <meta property="og:locale" content="pt_BR">
-<link rel="shortcut icon"
-            href="data:image/jpeg;base64,{{$favicon}}"
-            type="image/x-icon">
-<title>{{$title}}</title>
+<title>Pecas de artesanato</title>
 <meta name="description"
-    content="{{$descricao}}">
+    content="Amigurinhos chegou o meio de você aumentar sua renda vendendo sua arte ou artesanato para pessoas de todo o Brasil">
 <meta name="keywords"
     content="artesanato brasil, brasil, arte em maranhao, love, artesanato, arte em pano, croche">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<link rel="apple-touch-icon" sizes="57x57" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="60x60" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="72x72" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="76x76" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="114x114" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="120x120" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="144x144" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="152x152" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="icon" type="image/png" sizes="192x192"  href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="icon" type="image/png" sizes="32x32" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="icon" type="image/png" sizes="96x96" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="icon" type="image/png" sizes="16x16" href="data:image/jpeg;base64,{{$favicon}}">
-<meta name="msapplication-TileImage" content="data:image/jpeg;base64,{{$favicon}}">
 
 
 @stop

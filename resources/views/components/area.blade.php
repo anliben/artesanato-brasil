@@ -27,19 +27,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    function share(){
-                        if (navigator.share !== undefined) {
-                            navigator.share({
-                                title: 'O título da sua página',
-                                text: 'Um texto de resumo',
-                                url: 'https://seusite.com/sua_url',
-                            })
-                            .then(() => console.log('Successful share'))
-                            .catch((error) => console.log('Error sharing', error));
-                        }
-                    }
-                </script>
+
             @endforeach
 
         </div>
@@ -51,4 +39,4 @@
         <h5 class="center-align card-panel teal white-text lighten-2">Não existe peças publicadas</h5>
         @endif
 
-@stop
+@stop  

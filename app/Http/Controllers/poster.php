@@ -12,16 +12,14 @@ use function PHPSTORM_META\type;
 class poster extends Controller
 {
     public function area(){
-        $logged = Cache::get('logged');
-        $user = Cache::get('user');
+        if(Cache::get('image_user')){
+            $user = Cache::get('user');
+            $pecas = DB::select('select * from pecas where author = :id', ['id'=> $user->ID]);
 
-        $pecas = DB::select('select * from pecas where author = :id', ['id'=> $user->ID]);
-
-        return view('components.area', [
-            'title' =>'Minhas Peças',
-            'logged'=>$logged,
-            'pecas' => $pecas
-        ]);
+            return view('components.area', [
+                'pecas' => $pecas
+            ]);
+        }
     }
     public function product(){
 

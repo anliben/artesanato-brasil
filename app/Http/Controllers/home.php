@@ -12,19 +12,25 @@ class home extends Controller
 {
     public function show(){
 
-        try {
-            $profile = DB::select('select * from profile');
+        if(Cache::get('image_user')){
+            $cache = Cache::get('image_user');
             $logged = Cache::get('logged');
-            $descricao = 'Amigurinhos chegou o meio de você aumentar sua renda vendendo sua arte ou artesanato para pessoas de todo o Brasil';
+
+
              return view('components.home', [
                  'title' => 'Artesanato Brasil',
-                 'descricao' =>$descricao,
                 'logged' => $logged,
                 'posted' =>'<p class="teal white-text">Peça postada com sucesso!</p>'
-            ])->with('profiles', $profile);
-        } catch (\Throwable $th) {
-            return redirect('/offline');
-        }
+            ])->with('profiles', $cache);
+        }else{
+            $profile = DB::select('select * from profile');
+            $logged = Cache::get('logged');
+            Cache::set('image_user', $profile);
+             return view('components.home', [
+                'logged' => $logged,
+                'posted' =>'<p class="teal white-text">Peça postada com sucesso!</p>'
+                ])->with('profiles', $profile);
+            }
     }
     public function offline(){
         return view('components.offline');

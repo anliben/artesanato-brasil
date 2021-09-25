@@ -46,12 +46,7 @@ class account extends Controller
             "star" => 1]);
         return view('components.home');
     }
-    public function logout(){
-        Cache::forget('user');
-        Cache::forget('logged');
-        Cache::forget('id');
-        return redirect('/');
-    }
+
     public function auth(){
         $email = request()->input('email');
         $password = request()->input('password');
@@ -66,5 +61,11 @@ class account extends Controller
         }else{
             return view('components.login', ['auth'=>'<p class="red-text white">Usuário ou Senha inválido</p>']);
         }
+    }
+    public function logout(){
+        Cache::forget('user');
+        Cache::forget('logged');
+        Cache::forget('id');
+        return redirect('/');
     }
 }

@@ -15,6 +15,7 @@ class profile extends Controller
         $user = DB::table('profile')->where('id', $id)->first();
         $logged = Cache::get('logged');
 
+
         return view('components.single', [
             'favicon' => $user->image,
             'title'=> $user->nome ." - Artesanato Brasil",

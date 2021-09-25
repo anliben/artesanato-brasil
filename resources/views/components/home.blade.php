@@ -11,11 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{$descricao}}">
 <meta property="og:image"
-content="">
+content="icons/android-icon-192x192.png">
 <meta property="og:locale" content="pt_BR">
-<link rel="shortcut icon"
-            href=""
-            type="image/x-icon">
+
 <title>{{$title}}</title>
 <meta name="description"
     content="{{$descricao}}">
@@ -36,7 +34,6 @@ content="">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="manifest" href="icons/manifest.json">
 <meta name="msapplication-TileColor" content="#EE6E73">
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 <meta name="theme-color" content="##EE6E73">

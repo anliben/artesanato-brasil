@@ -1,4 +1,10 @@
 @extends('welcome')
+@section('meta_tags')
+
+<title>login - Artesanato Brasil</title>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+@stop
 @section('content')
 
     {!! $auth ?? '' !!}

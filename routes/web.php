@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\home::class ,'show']);
-Route::get('/offline', [App\Http\Controllers\home::class ,'offline']);
+
+Route::get('/poster/delete/{id}', [App\Http\Controllers\poster::class ,'delete']);
+Route::get('/poster/alter/{id}', [App\Http\Controllers\poster::class ,'alter']);
 
 
 Route::get('/profile/{nome}', [App\Http\Controllers\profile::class ,'profile']);
@@ -29,4 +31,3 @@ Route::post('/account/create/new', [App\Http\Controllers\account::class ,'store'
 Route::get('/product', [App\Http\Controllers\poster::class ,'product']);
 Route::get('/area', [App\Http\Controllers\poster::class , 'area']);
 Route::post('/product/new', [App\Http\Controllers\poster::class ,'create']);
-

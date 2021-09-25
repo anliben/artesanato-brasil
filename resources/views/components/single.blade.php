@@ -10,10 +10,10 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{$descricao}}">
 <meta property="og:image"
-content="">
+content="data:image/jpeg;base64,{{$favicon}}">
 <meta property="og:locale" content="pt_BR">
 <link rel="shortcut icon"
-            href=""
+            href="data:image/jpeg;base64,{{$favicon}}"
             type="image/x-icon">
 <title>{{$title}}</title>
 <meta name="description"
@@ -35,7 +35,6 @@ content="">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/jpeg;base64,{{$favicon}}">
 <link rel="icon" type="image/png" sizes="96x96" href="data:image/jpeg;base64,{{$favicon}}">
 <link rel="icon" type="image/png" sizes="16x16" href="data:image/jpeg;base64,{{$favicon}}">
-<link rel="manifest" href="data:image/jpeg;base64,{{$favicon}}">
 <meta name="msapplication-TileImage" content="data:image/jpeg;base64,{{$favicon}}">
 <meta name="msapplication-TileColor" content="#EE6E73">
 <meta name="theme-color" content="##EE6E73">

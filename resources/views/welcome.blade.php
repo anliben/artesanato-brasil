@@ -11,13 +11,13 @@
     <meta name="msapplication-TileColor" content="#EE6E73">
     <meta name="theme-color" content="#EE6E73">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZYC6HRRKF"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1BG239SQC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-6ZYC6HRRKF');
+  gtag('config', 'G-M1BG239SQC');
 </script>
 </head>
 <body>

@@ -23,7 +23,7 @@
                 </div>
                 <div class="input-field col s6">
                     <input id="password" name="password" min="4" type="password" class="validate" required>
-                    <label for="password">Password</label>
+                    <label for="password">Crie uma senha</label>
                 </div>
             </div>
 
@@ -46,14 +46,16 @@
                         <input type="file" name="image" accept="image/png, image/gif, image/jpeg, image/webp, image/jpg" required>
                     </div>
                     <div class="file-path-wrapper">
-                        <input class="file-path validate" name="image" accept="image/png, image/gif, image/jpeg, image/webp, image/jpg" type="text" required>
+                        <input id="file" class="file-path validate" name="image" accept="image/png, image/gif, image/jpeg, image/webp, image/jpg" type="text" required>
+                    <label for="file">Envie uma imagem sua ou de seu grupo</label>
+
                     </div>
                 </div>
             </div>
             <button class="btn waves-effect waves-light" type="submit">Criar Conta
                 <i class="material-icons right">send</i>
             </button>
-            <a href="/account/login">Login</a>
+            <a href="{{url('/account/login')}}">Login</a>
 
         </form>
     </div>

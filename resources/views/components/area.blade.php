@@ -39,4 +39,4 @@
         <h5 class="center-align card-panel teal white-text lighten-2">Não existe peças publicadas</h5>
         @endif
 
-@stop  
+@stop

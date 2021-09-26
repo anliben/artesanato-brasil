@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 
-    {{ $error ?? '' }}
+    {!! $error ?? '' !!}
 
     <div class="row">
         <form style="margin-top: 3%;" action="/account/create/new" enctype="multipart/form-data" method="POST" class="col s12"> @csrf

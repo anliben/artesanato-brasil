@@ -4,10 +4,10 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class login extends TestCase
 {
     /**
-     * A basic test example.
+     * @test
      *
      * @return void
      */

@@ -25,10 +25,18 @@ class account extends Controller
         $descricao = request()->input('descricao');
 
         $upload = request()->file('image');
-        $file = fopen($upload, "rb");
-        $contents = fread($file, filesize($upload));
-        $base = base64_encode($contents);
-        fclose($file);
+        try {
+            //code...
+            $file = fopen($upload, "rb");
+            $contents = fread($file, 4096);
+            $base = base64_encode($contents);
+            fclose($file);
+        } catch (\Throwable $th) {
+            //throw $th;
+            return view('components.create', [
+                'error'=>'<p class="red-text white">Escolha outra image, sua imagem ultrapassa o valor de memoria permitido</p>'
+            ]);
+        }
 
         $user = DB::table('profile')->where('email', $email)->first();
 
@@ -38,13 +46,13 @@ class account extends Controller
 
 
         DB::table('profile')->insert(["nome" => $nome .' ' .$sobrenome,
-  "email" => $email,
-  "password" => $password,
-  "telefone" => $telefone,
-  "descricao" => $descricao,
-            "image" => $base,
-            "star" => 1]);
-            return redirect('/account/login');
+        "email" => $email,
+        "password" => $password,
+        "telefone" => $telefone,
+        "descricao" => $descricao,
+        "image" => $base,
+        "star" => 1]);
+        #return redirect('/account/login');
     }
 
     public function auth(){

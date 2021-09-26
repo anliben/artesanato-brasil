@@ -11,7 +11,7 @@ class profile extends Controller
 {
     public function profile($id){
 
-        $pecas = DB::select('select * from pecas where author = :id', ['id'=> $id]);
+        $pecas = DB::select('select * from pecas where author = :id  order by ID desc', ['id'=> $id]);
         $user = DB::table('profile')->where('id', $id)->first();
         $logged = Cache::get('logged');
 

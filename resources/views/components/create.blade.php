@@ -43,15 +43,17 @@
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>File</span>
-                        <input type="file" name="image" accept="image/png, image/gif, image/jpeg, image/webp, image/jpg" required>
+                        <input type="file" name="image" accept="image/*" required>
                     </div>
                     <div class="file-path-wrapper">
-                        <input id="file" class="file-path validate" name="image" accept="image/png, image/gif, image/jpeg, image/webp, image/jpg" type="text" required>
+                        <input id="file" class="file-path validate" name="image" accept="image/*" type="text" required>
                     <label for="file">Envie uma imagem sua ou de seu grupo</label>
 
-                    </div>
                 </div>
             </div>
+            <span style="background-color: rgba(0, 0, 0, 0.178); font-weight: bolder;" class="card-title darken-1 ">Clicando em 'Criar Conta' você aceita com os termos de uso e privacidade disponibilizado pelo Artsã Brasil</span>
+            </div>
+
             <button class="btn waves-effect waves-light" type="submit">Criar Conta
                 <i class="material-icons right">send</i>
             </button>

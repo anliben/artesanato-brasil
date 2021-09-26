@@ -12,8 +12,7 @@ class home extends Controller
 {
     public function show(){
 
-
-            $profile = DB::select('select * from profile');
+            $profile = DB::select('select * from profile order by star desc');
             $logged = Cache::get('logged');
             Cache::set('image_user', $profile);
              return view('components.home', [

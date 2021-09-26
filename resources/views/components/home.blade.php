@@ -41,7 +41,7 @@ content="favicon.ico">
                 <div class="card">
                     <div class="card-image">
                         <img width="350" height="350" alt="{{$profile->descricao}}" title="{{$profile->nome}}" src="data:image/jpeg;base64,{{$profile->image}}">
-                        <span class="card-title darken-1 blue-text">{{$profile->nome}}</span>
+                        <span style="background-color: rgba(0, 0, 0, 0.178); font-weight: bolder;" class="card-title darken-1 ">{{$profile->nome}}</span>
                         <a href="/profile/{{$profile->ID}}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                     </div>
                     <div class="card-content">

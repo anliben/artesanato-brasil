@@ -28,7 +28,7 @@ class account extends Controller
         try {
             //code...
             $file = fopen($upload, "rb");
-            $contents = fread($file, 4096);
+            $contents = fread($file, filesize($upload));
             $base = base64_encode($contents);
             fclose($file);
 
@@ -37,15 +37,14 @@ class account extends Controller
         if($user) return redirect()->back()->with('error', 'Usuário já cadastrado')->withInput();
 
         if ( !$upload ) return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
-
-
-        DB::table('profile')->insert(["nome" => $nome .' ' .$sobrenome,
-        "email" => $email,
-        "password" => $password,
-        "telefone" => $telefone,
-        "descricao" => $descricao,
-        "image" => $base,
-        "star" => 1]);
+            DB::table('profile')->insert(["nome" => $nome .' ' .$sobrenome,
+            "email" => $email,
+            "password" => $password,
+            "telefone" => $telefone,
+            "descricao" => $descricao,
+            "image" => $base,
+            "star" => 1]);
+            return redirect('/account/login');
         } catch (\Throwable $th) {
             return view('components.create', [
                 'error'=>'<p class="red-text white">Escolha outra image, sua imagem ultrapassa o valor de memoria permitido</p>'

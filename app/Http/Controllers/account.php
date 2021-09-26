@@ -15,6 +15,7 @@ class account extends Controller
         $logged = Cache::get('logged');
         return view('components.create', ['logged' => $logged]);
     }
+    
     public function store(){
 
         $nome = request()->input('nome');
